@@ -1,0 +1,11 @@
+.player-decoration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.player {
+    
+}
+.p-center {
+    text-align: center;
+}
