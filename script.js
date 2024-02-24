@@ -8,6 +8,27 @@ for (let btn of allBtn) {
         const name = event.target.parentNode.parentNode.childNodes[1].innerText;
         const price = event.target.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
         const category = event.target.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+        // color & disabled
+        event.target.setAttribute("disabled",false)
+        
+        // valid card
+        if (elementNumber('cart') + 1 > 6) {
+            alert("you can't click")
+            return;
+        }
+        event.target.parentNode.parentNode.style.backgroundColor = 'green';
+        
+        // budget change , cart & left
+        const budget = elementNumber('budget')
+        document.getElementById('budget').innerText = budget - parseInt(price);
+        
+        const cartCount = elementNumber('cart')
+        document.getElementById('cart').innerText = cartCount + 1;
+
+        const leftCount = elementNumber('left')
+        document.getElementById('left').innerText = leftCount - 1;
+
+
         // create element & append 
         const showingPlayerName = document.getElementById('showing-player-name');
 
@@ -41,9 +62,22 @@ function updateTotalCost(value) {
     document.getElementById('total-cost').innerText = sum;
 }
 // update grandtotal
-function updateGrandTotal(){
+function updateGrandTotal(status) {
     const totalCost = elementNumber('total-cost');
-    document.getElementById('grand-total').innerText = totalCost;
+    if (status === undefined) {
+        document.getElementById('grand-total').innerText = totalCost;
+    }
+    else {
+        const couponCode = document.getElementById('coupon').value;
+        if(couponCode === "Love 20"){
+            const discountCoupon = totalCost * 0.20
+            const discount = totalCost - discountCoupon;
+            document.getElementById('grand-total').innerText = discount;
+        }else{
+            alert('invalid')
+        }
+    }
+
 }
 
 // function category
