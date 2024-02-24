@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Recap Project - Player Get</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="max-w-6xl mx-auto bg-slate-400 py-5">
+        <nav class="flex justify-around text-2xl text-black font-bold">
+            <div>Budge: <span class="text-white" id="budget">2500</span></div>
+            <div>Cart: <span class="text-white" id="cart">0</span></div>
+            <div>left: <span class="text-white" id="left">6</span></div>
+        </nav>
+    </header>
+    <main class="max-w-5xl mx-auto mt-5">
+        <div class="all-container flex">
+            <div class="card-container grid grid-cols-2 flex-1 p-2 gap-3">
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Tamim ekba</h2>
+                    <h2>Price: <span>300$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Shommo</h2>
+                    <h2>Price: <span>320$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Razzak</h2>
+                    <h2>Price: <span>300$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Shakib</h2>
+                    <h2>Price: <span>400$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Muskfique</h2>
+                    <h2>Price: <span>300$</span></h2>
+                    <h2>Category: cipper</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Mashafi</h2>
+                    <h2>Price: <span>300$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Nasir</h2>
+                    <h2>Price: <span>250$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+                <div id="cart-box" class="border-2 p-4 shadow-lg">
+                    <h2>Mustafizur</h2>
+                    <h2>Price: <span>300$</span></h2>
+                    <h2>Category: bat</h2>
+                    <div class="flex">
+                        <button id="all-btn" class="all-btn p-1 text-white bg-gray-500">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="result-container flex-1 ps-4 mt-2">
+                <div class="space-y-2 border-2 p-3">
+                    <h1 class="font-bold text-lg text-center">My Cart</h1>
+                    <hr>
+                    <div class="flex justify-around">
+                        <h1 class="text-xl font-medium">Name</h1>
+                        <h1 class="text-xl font-medium">Price</h1>
+                        <h1 class="text-xl font-medium">Category</h1>
+                    </div>
+                    <div id="showing-player-name"></div>
+                    <hr>
+                    <h1 class="text-center">Total const: <span id="total-cost">0</span></h1>
+                    <hr>
+                    <div class="flex justify-center">
+                        <div>
+                            <input type="text" class="border-2 p-1" placeholder="type your coupon">
+                            <button id="coupon-aply" class="border-2 border-gary-400 p-1 bg-gray-400 text-white"
+                                type="submit">Apply</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h1 class="text-center font-bold text-xl">Grand Total: <span id="grand-total">0</span></h1>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
